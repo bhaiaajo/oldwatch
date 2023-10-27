@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/light.png" id="dark">
+  <link rel="icon" type="image/png" href="/dark.png" id="light">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6061519007273779"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Movie & Series</title>
+  <meta property="og:title" content="No Name FR" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://watch.jenildobaria.repl.co/" />
+<meta property="og:description" content="Watch Movies and Shows ad free for 100% Free" />
+    <style>
+        body{
+            margin: auto;
+        }
+        div{
+            display: inline-block;
+        }
+        .khaman {
+            padding-top: 3px;
+            font-size: 80px;
+            font-family: 'Borel', cursive;
+        }
+
+        input{
+            float:left;
+            margin-right: 3px;
+        }
+/* CSS */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+    </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GSJRJYKS0"></script>
+    <script>
+                window.onload = () => {
+                  /*const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+matcher.addListener(onUpdate);
+onUpdate();
+    lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+
+function onUpdate() {
+  if (matcher.matches) {
+    lightSchemeIcon.remove();
+    document.head.append(darkSchemeIcon);
+  } else {
+    document.head.append(lightSchemeIcon);
+    darkSchemeIcon.remove();
+  }
+}*/
+
+
+<!-- Google tag (gtag.js) -->
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2GSJRJYKS0');
+
+            const button = document.getElementById("random")
+
+            button.onclick = () =>{
+              open("/random")
+            }
+                  
+            document.addEventListener("keypress", (e) =>{
+                    if(e.keyCode === 13){
+                        openMoviePage()
+                    }
+            })
+            document.getElementById("submit").addEventListener("click", openMoviePage)
+            function openMoviePage(){
+                const searchTerm = document.getElementById("search").value
+                console.log(searchTerm)
+                        if(!searchTerm) return;
+                        open(`/play/${searchTerm}`)
+                        /*fetch("/api/info?q=" + searchTerm).then(r => r.json()).then(got =>{
+
+                            if(got.error) return alert(got.error)
+                            else window.location.href = `/play/${searchTerm}`
+
+                        })*/
+            }
+            /*fetch("/new").then(r => r.json()).then(g =>{
+        
+        const nm = document.getElementById("nm")
+        //document.body.appendChild(nm)
+        g.forEach(x => {
+            const e = document.createElement("h1")
+            e.innerHTML = x.name
+            const redirect = document.createElement("a")
+          redirect.style["text-decoration"] = "none"
+            redirect.href = x.url
+            redirect.appendChild(e)
+            nm.appendChild(redirect)
+        })
+
+    })*/
+
+            }
+    </script>
+
+</head>
+<body>
+    <center>
+    <img src="/logo.png" width="50%" height="50%">
+    <br>
+    <div style="padding-top: 100px;">
+        <input type="text" id="search" placeholder="Search Movies" style="width: 500px;
+        height: 60px;
+        font-size: 30px;
+        border-color: black;">
+        <input type="button" id="submit" value="🔍" style="height: 60px; width: 50px; font-size: 25px; text-align: center;">
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1 style="font-family: 'Rubik', sans-serif;;">For exact result you can use imdb id, example tt0141842</h1>
+      <!-- HTML !-->
+<button class="button-17" id="random" role="button">Random Movie 🎲</button>
+
+    <br>
+    <a href="https://paypal.me/donateagent"><img src="https://viatesting.files.wordpress.com/2020/03/paypal-donate-button.png?w=640" height="150" width="400"></a>
+    <div id="nm">
+        <h1></h1>
+    </div>
+    </center>
+
+
+</body>
+</html>
